@@ -13,9 +13,9 @@ body#home{max-height: 20000px;}
 .col-md-4{padding: 100px 15px 0;}
 .intro article{display: none;}
 .intro .post-content{color: #fff !important;font-size: 15px;}
-.intro article.active{display: block;animation:1.5s ease-in-out fadeIn;}
+.intro article.active{display: block;animation:1.5s ease-in-out fadeIn;overflow: hidden;}
 @keyframes fadeIn{
-	0%{ opacity:0.3; transform:translateY(120px);height: 0px;}
+	0%{ opacity:0.3; transform:translateY(120px);height: 50px;}
 	100%{ opacity:1; transform:translateY(0px);height: 720px;}
 }
 .post-header {margin: .67em 0;line-height: 1.1em;}
