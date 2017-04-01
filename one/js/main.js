@@ -6,7 +6,7 @@ $(function () {
 	$("article").hover(function () {
 		clearTimeout(timer);
 	}, function () {
-		timer = setTimeout("showimg(" + index + ")", 3000);
+		timer = setTimeout("showimg(" + index + ")", 5000);
 	});
 });
 
@@ -15,5 +15,5 @@ function showimg(num) {
 	 $("article").removeClass("active");
 	 $("article").eq(index-1).addClass("active");
 	 index = index + 1 > 3 ? 1 : index + 1;
-	 timer = setTimeout("showimg(" + index + ")", 3000);
+	 timer = setTimeout("showimg(" + index + ")", 5000);
 }
