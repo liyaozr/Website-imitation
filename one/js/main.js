@@ -17,3 +17,41 @@ function showimg(num) {
 	 index = index + 1 > 3 ? 1 : index + 1;
 	 timer = setTimeout("showimg(" + index + ")", 5000);
 }
+
+$(window).scroll(function() {
+	if (!$("body").hasClass("old_Android") && !$("body").hasClass("old_iOS")) {
+		if ($(window).scrollTop() > 800 - $(".navbar-default").height() - 1 && !$(".navbar-default").hasClass("attop")){
+			$(".navbar-default").addClass("attop");
+
+		}
+		if ($(window).scrollTop() < 800 - $(".navbar-default").height() - 1 && $(".navbar-default").hasClass("attop")) {
+			$(".navbar-default").removeClass("attop");
+		}
+	}
+	if ($(window).scrollTop()) $(".arrow").hide();
+	else if (!$("body").hasClass("touch")) $(".arrow").show();
+});
+
+$("a").click(function() {
+	//判断条件，不明白为什么要判断body有没有这个class
+	if ($("body").hasClass("home") && $(this).attr("href")) {
+		//把href中的/去掉
+		el = $.attr(this, "href").replace("/", "");
+		if (el != "#") {
+			$("html, body").animate({
+				scrollTop: $(el).offset().top - $(".navbar-default").height()
+			}, 500);
+			if ($(".navmenu.offcanvas").hasClass("in")) $(".navbar-toggle").click();
+			return false;
+		}
+	}
+});
+
+var bg=['url(image/bg1.jpg)','url(image/bg2.jpg)','url(image/bg3.jpg)'];
+$(function () {
+	var num;
+	num  = Math.floor(Math.random()*3);
+	console.log(num);
+	console.log(bg[num]);
+	$('#wrapall').css('background', bg[num]+'no-repeat');
+});
