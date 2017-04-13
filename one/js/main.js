@@ -33,9 +33,8 @@ $(window).scroll(function() {
 });
 
 $("a").click(function() {
-	//判断条件，不明白为什么要判断body有没有这个class
+
 	if ($("body").hasClass("home") && $(this).attr("href")) {
-		//把href中的/去掉
 		el = $.attr(this, "href").replace("/", "");
 		if (el != "#") {
 			$("html, body").animate({
