@@ -1,4 +1,7 @@
 $('.home-header').parallax({imageSrc: 'image/header_bg.jpg'});
+$('.parallax').parallax({imageSrc: 'image/header_bg.jpg'});
+$('.rsvp').parallax({imageSrc: 'image/section_bg.jpg'});
+
 
 function preLoad() {
 	$(window).on('load', function() {
