@@ -29,7 +29,8 @@ $(window).scroll(function() {
 		}
 	}
 	if ($(window).scrollTop()) $(".arrow").hide();
-	else if (!$("body").hasClass("touch")) $(".arrow").show();
+	if ($(window).scrollTop()===0) $(".arrow").show();
+	// else if (!$("body").hasClass("touch")) $(".arrow").show();
 });
 
 $("a").click(function() {
@@ -50,7 +51,5 @@ var bg=['url(image/bg1.jpg)','url(image/bg2.jpg)','url(image/bg3.jpg)'];
 $(function () {
 	var num;
 	num  = Math.floor(Math.random()*3);
-	console.log(num);
-	console.log(bg[num]);
 	$('#wrapall').css('background', bg[num]+'no-repeat');
 });
