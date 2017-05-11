@@ -19,32 +19,61 @@
         <![endif]-->
     </head>
     <body id="home" class="home">
-    	<div id="wrapall">
+    	<div class="preload hidden-sm">
+    		<img src="image/fba1.svg">
+    	</div>
 
+    	<div id="wrapall">
 	    	<header role="navigation">
 	    	<!-- 添加 role="navigation"，有助于增加可访问性。 -->
 	    		<nav  class="nav navbar-default">
 		    		<div class="container">
-		    			<div class="navbar-header">
-					        <a class="navbar-brand" href="#top">
-					        <img src="image/fba1.svg" width="170px;">
-					        <img src="image/fba2.svg" width="170px;">
-					        </a>
-					    </div>
-			    		<ul class="nav navbar-nav navbar-right">
-			    			<li><a href="/#over-ons">ABOUT</a></li>
-			    			<li><a href="#">APPORACH</a></li>
-			    			<li><a href="/#openingTime">OPPENING HOURS</a></li>
-			    			<li><a href="/#treatments">TREATMENTS</a></li>
-			    			<li><a href="/#team">TEAM</a></li>
-			    			<li><a href="#">NIEUWS</a></li>
-			    			<li><a href="#">CONTACT</a></li>
-			    		</ul>
+		    			<div class="navmenu navmenu-default navmenu-fixed-left">
+		    				<img src="image/fba1.svg" width="170px;">
+		    				<ul class="nav navbar-nav navbar-right">
+		    					<li><a href="/#over-ons">ABOUT</a></li>
+		    					<li><a href="#">APPORACH</a></li>
+		    					<li><a href="/#openingTime">OPPENING HOURS</a></li>
+		    					<li><a href="/#treatments">TREATMENTS</a></li>
+		    					<li><a href="/#team">TEAM</a></li>
+		    					<li><a href="#">NIEUWS</a></li>
+		    					<li><a href="#">CONTACT</a></li>
+		    				</ul>
+		    			</div>
+		    			<div class="navbar-header visible-xs-block">
+		    			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		    			        <span class="sr-only">Toggle navigation</span>
+		    			        <span class="icon-bar"></span>
+		    			        <span class="icon-bar"></span>
+		    			        <span class="icon-bar"></span>
+		    			      </button>
+		    			      <a class="navbar-brand" href="#top">
+		    			      	<img src="image/fba1.svg" width="170px;">
+						        <img src="image/fba2.svg" width="170px;">
+		    			      </a>
+		    			</div>
+		    			<div class="navbar-collapse collapse hidden-xs">
+			    			<div class="navbar-header">
+						        <a class="navbar-brand" href="#top">
+						        <img src="image/fba1.svg" width="170px;">
+						        <img src="image/fba2.svg" width="170px;">
+						        </a>
+						    </div>
+				    		<ul class="nav navbar-nav navbar-right">
+				    			<li><a href="/#over-ons">ABOUT</a></li>
+				    			<li class="hidden-sm"><a href="#">APPORACH</a></li>
+				    			<li><a href="/#openingTime">OPPENING HOURS</a></li>
+				    			<li><a href="/#treatments">TREATMENTS</a></li>
+				    			<li class="hidden-sm"><a href="/#team">TEAM</a></li>
+				    			<li class="hidden-sm"><a href="#">NIEUWS</a></li>
+				    			<li><a href="#">CONTACT</a></li>
+				    		</ul>
+		    			</div>
 		    		</div>
 	    		</nav>
 	    	</header>
 
-	    	<a class="arrow bounce" href="#over-ons" style="display: block;"></a>
+	    	<a class="arrow bounce hidden-sm" href="#over-ons" style="display: block;"></a>
 
     		<div class="intro">
 	    		<div class="container">

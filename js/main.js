@@ -1,3 +1,18 @@
+// 加载动画
+function preLoad() {
+	$(window).on('load', function() {
+	    var $preload = $('.preload');
+	    $preload.delay(250).fadeOut(800);
+	});
+}
+preLoad();
+
+// 导航菜单
+
+
+
+
+
 var timer=null;
 var index = 1;
 $(function () {
@@ -18,6 +33,7 @@ function showimg(num) {
 	 timer = setTimeout("showimg(" + index + ")", 5000);
 }
 
+if (window.width()>768) $(".arrow").show();
 $(window).scroll(function() {
 	if (!$("body").hasClass("old_Android") && !$("body").hasClass("old_iOS")) {
 		if ($(window).scrollTop() > 800 - $(".navbar-default").height() - 1 && !$(".navbar-default").hasClass("attop")){
@@ -29,7 +45,7 @@ $(window).scroll(function() {
 		}
 	}
 	if ($(window).scrollTop()) $(".arrow").hide();
-	if ($(window).scrollTop()===0) $(".arrow").show();
+	if (($(window).scrollTop()===0)&&(window.width()>768)) $(".arrow").show();
 	// else if (!$("body").hasClass("touch")) $(".arrow").show();
 });
 

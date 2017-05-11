@@ -1,13 +1,20 @@
 
+/* 预加载动画 */
+.preload{width: 100%;height: 100%;background-color: #5e2d83;z-index: 999;position: absolute;text-align: center;}
+.preload img{margin-top: 15%;}
+
+/* public */
 body#home{max-height: 20000px;}
 .post-title{text-transform: uppercase;font-size: 35px;line-height: 1.1em;font-weight: 700;font-family: 'PT Sans Narrow',sans-serif;color:#241a1f;}
 .post-content{font-size: 18px;font-family:'PT Serif',serif;margin-bottom: 2em;font-weight: 400;line-height: 2em;color: #666 !important;}
-
 #wrapall{background: url(../image/bg1.jpg) no-repeat;color: #fff!important;}
 
-
+/* nav */
 .navbar-default{background: transparent;position: absolute;width: 100%;z-index: 2;min-height: 50px;margin-bottom: 20px;}
 
+.navbar-default .navbar-toggle{position: absolute;padding: 10px;border: none;top: 10px;right: 5px;}
+.navbar-default .navbar-toggle .icon-bar{display: block;width: 22px;height: 2px;border-radius: 1px;background: #fff;}
+.navmenu{display: none;}
 .navbar-default .navbar-brand{color: #fff!important;}
 .navbar-right{font-size: 17px;color: #fff;}
 .navbar-default ul.navbar-nav>li>a{color: #fff;font-family: 'PT Sans Narrow',sans-serif;font-weight: 700;font-size: 17px;display: block;border-top: 3px solid transparent;margin: 20px 0 25px 30px;padding: 4px 0;position: relative;}
