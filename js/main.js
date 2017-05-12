@@ -45,11 +45,11 @@ function showimg(num) {
 
 
 $(window).scroll(function() {
-		if ($(window).scrollTop() > 800 - $(".navbar-default").height() - 1 && !$(".navbar-default").hasClass("attop")){
-			$(".navbar-default").addClass("attop");
+		if ($(window).scrollTop() > 800 - $(".navbar-default").height() - 1 && !$(".navbar-default").hasClass("navbar-fixed-top")){
+			$(".navbar-default").addClass("navbar-fixed-top");
 		}
-		if ($(window).scrollTop() < 800 - $(".navbar-default").height() - 1 && $(".navbar-default").hasClass("attop")) {
-			$(".navbar-default").removeClass("attop");
+		if ($(window).scrollTop() < 800 - $(".navbar-default").height() - 1 && $(".navbar-default").hasClass("navbar-fixed-top")) {
+			$(".navbar-default").removeClass("navbar-fixed-top");
 		}
 	if ($(window).scrollTop()) $(".arrow").hide();
 	if (($(window).scrollTop()===0)&&(document.documentElement.clientWidth>768)) $(".arrow").show();
@@ -73,7 +73,7 @@ var bg=['url(image/bg1.jpg)','url(image/bg2.jpg)','url(image/bg3.jpg)'];
 $(function () {
 	var num;
 	num  = Math.floor(Math.random()*3);
-	$('#wrapall').css('background', bg[num]+'no-repeat');
+	$('#intro').css('background', bg[num]+'no-repeat');
 });
 $(function () {
 	function nextmember() {
