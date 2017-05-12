@@ -7,15 +7,24 @@ function preLoad() {
 }
 preLoad();
 
-// 导航菜单
+// 移动端导航菜单呼出
+$(function () {
+	var $menu = $(".navmenu");
+	$(".navbar-toggle").click(function() {
+		var l = $menu.offset().left;
+		if (l === -230) {
+			$menu.animate({left:0}, 300);
+		}else if (l === 0) {
+			$menu.animate({left:-230}, 300);
+		}
+	});
+});
 
-
-
-
-
+// 文字轮播
 var timer=null;
 var index = 1;
 $(function () {
+
 	showimg(index);
 	// 鼠标移入移出
 	$("article").hover(function () {
@@ -24,7 +33,6 @@ $(function () {
 		timer = setTimeout("showimg(" + index + ")", 5000);
 	});
 });
-
 function showimg(num) {
 	 index = num;
 	 $("article").removeClass("active");
@@ -33,20 +41,16 @@ function showimg(num) {
 	 timer = setTimeout("showimg(" + index + ")", 5000);
 }
 
-if (window.width()>768) $(".arrow").show();
+
 $(window).scroll(function() {
-	if (!$("body").hasClass("old_Android") && !$("body").hasClass("old_iOS")) {
 		if ($(window).scrollTop() > 800 - $(".navbar-default").height() - 1 && !$(".navbar-default").hasClass("attop")){
 			$(".navbar-default").addClass("attop");
-
 		}
 		if ($(window).scrollTop() < 800 - $(".navbar-default").height() - 1 && $(".navbar-default").hasClass("attop")) {
 			$(".navbar-default").removeClass("attop");
 		}
-	}
 	if ($(window).scrollTop()) $(".arrow").hide();
-	if (($(window).scrollTop()===0)&&(window.width()>768)) $(".arrow").show();
-	// else if (!$("body").hasClass("touch")) $(".arrow").show();
+	if (($(window).scrollTop()===0)&&(document.documentElement.clientWidth>768)) $(".arrow").show();
 });
 
 $("a").click(function() {
@@ -69,3 +73,40 @@ $(function () {
 	num  = Math.floor(Math.random()*3);
 	$('#wrapall').css('background', bg[num]+'no-repeat');
 });
+$(function () {
+	function nextmember() {
+		$(".slide").append($(".slide li:first"));
+		if ($(window).width() > 991) {
+			$(".slide li").css("display", "inline-block");
+			$(".slide li:nth-child(4)").css({
+				opacity: 0,
+				display: "inline-block"
+			}).animate({
+				opacity: 1
+			}, 600);
+		}
+	}
+	$('#toRight').click(function() {
+		nextmember();
+	});
+});
+
+$(function () {
+	function prevmember() {
+		$(".slide").prepend($(".slide li:last"));
+		if ($(window).width() > 991) {
+			$(".slide li").css("display", "inline-block");
+			$(".slide li:nth-child(1)").css({
+				opacity: 0,
+				display: "inline-block"
+			}).animate({
+				opacity: 1
+			}, 600);
+		}
+	}
+	$('#toLeft').click(function () {
+		prevmember();
+	});
+});
+
+

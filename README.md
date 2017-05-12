@@ -1,6 +1,6 @@
 模仿bootstrap推荐网站[koffijberghairdressers](http://koffijberghairdressers.com/)，侵删。
 
-效果图请戳☞[这里](https://liyaozr.github.io/Website-imitation/one/)
+效果图请戳☞[这里](https://liyaozr.github.io/Website-imitation)
 
 仿站过程中遇到的一些知识点~
 
