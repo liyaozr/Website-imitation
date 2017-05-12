@@ -23,6 +23,7 @@ a.btn-primary:hover{background: #5e2d83;border-color: #5e2d83;}
 #nav{background: transparent;position: absolute;width: 100%;z-index: 2;min-height: 75px;margin-bottom: 20px;border: none;}
 #nav .navbar-header button{height: 55px;}
 #nav .navmenu{width:230px;border:0;background-color:#241a1f;border-color:transparent;position: absolute;top: 0;left: -230px;}
+#nav .navmenu a{color: #fff;}
 #nav .navmenu>img{margin:20px 15px}
 
 #nav .navbar-toggle{border:none;}
@@ -37,7 +38,8 @@ a.btn-primary:hover{background: #5e2d83;border-color: #5e2d83;}
 #nav.attop .navbar-right a{color: #403732;}
 #nav.attop .navbar-brand .white-brand{display: none;}
 #nav.attop .navbar-brand .black-brand{display: block;}
-#nav.attop .icon-bar{background-color: #403732;z-index: 3;}
+#nav.attop .navbar-toggle{z-index: 3;}
+#nav.attop .icon-bar{background-color: #403732;z-index: 4;}
 
 /* 小箭头 */
 .arrow{background: url(../image/down.svg);width: 40px;height: 40px;position: absolute;bottom: 3px;left: 50%;transform: translateX(-20px); animation: 2s infinite bounce;}

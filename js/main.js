@@ -1,9 +1,11 @@
 // 加载动画
 function preLoad() {
-	$(window).on('load', function() {
+	if (document.documentElement.clientWidth>768) {
+		$(window).on('load', function() {
 	    var $preload = $('.preload');
 	    $preload.delay(250).fadeOut(800);
 	});
+	}
 }
 preLoad();
 
