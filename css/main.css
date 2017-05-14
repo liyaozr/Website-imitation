@@ -16,28 +16,38 @@ a.btn-primary:hover{background: #5e2d83;border-color: #5e2d83;}
 .preload{width: 100%;height: 100%;background-color: #5e2d83;z-index: 999;position: absolute;text-align: center;}
 .preload img{margin-top: 15%;}
 
+#header{background: url(../image/bg1.jpg) center top no-repeat;height: 800px;}
+@media all and (max-width:991px){
+	.cover{
+	    background: rgba(86,76,73,.8);
+	    width:100%;
+	    height:800px;
+	}
+}
 /* nav */
-#nav{background: transparent;position: absolute;width: 100%;z-index: 2;min-height: 75px;margin-bottom: 20px;border: none;}
-#nav .nav-wrap{position: absolute;width: 100%;}
+#nav{background: transparent;height: 75px;border: none;}
 #nav .navbar-header button{height: 55px;}
-#nav .navmenu{width:230px;border:0;background-color:#241a1f;border-color:transparent;position: absolute;top: 0;left: -230px;}
-#nav .navmenu a{color: #fff;}
+
+#nav .navmenu{width:200px;border:0;background-color:#241a1f;border-color:transparent;position: absolute;top: 0;left: -230px;z-index: 999;}
+#nav .navmenu a{color: #fff;margin-left: 15px;}
 #nav .navmenu>img{margin:20px 15px}
 
-#nav .navbar-toggle{border:none;padding: }
+#nav .navbar-toggle{border:none;}
 #nav .navbar-toggle:hover,#nav .navbar-toggle:focus{background: transparent;border:none;}
 #nav .icon-bar{background-color: #fff;}
-#nav .navbar-right a{color: #fff;display: block;border-top: 3px solid transparent;margin: 20px 0 25px 30px;padding: 4px 0;position: relative;}
+
+#nav .navbar-right a{color: #fff;display: inline-block;border-top: 3px solid transparent;margin: 20px 0 25px 30px;padding: 4px 0;}
 #nav .navbar-brand{padding: 10px 10px;}
 #nav .black-brand{display: none;}
 #nav li>a>img{height: 16px;width: auto;}
 
-#nav.navbar-fixed-top{width: 100%;position: fixed;background: #fff;border-bottom: 1px solid rgba(86,76,73,.15);z-index:2;}
+#nav.navbar-fixed-top{background: #fff;border-bottom: 1px solid rgba(86,76,73,.15);}
+#nav.navbar-fixed-top .navbar-collapse{padding: 0 15px;}
 #nav.navbar-fixed-top .navbar-right a{color: #403732;}
 #nav.navbar-fixed-top .navbar-brand .white-brand{display: none;}
 #nav.navbar-fixed-top .navbar-brand .black-brand{display: block;}
-#nav.navbar-fixed-top .navbar-toggle{z-index: 3;}
-#nav.navbar-fixed-top .icon-bar{background-color: #403732;z-index: 4;}
+#nav.navbar-fixed-top .icon-bar{background-color: #403732;}
+
 /* 小箭头 */
 .arrow{background: url(../image/down.svg);width: 40px;height: 40px;position: absolute;bottom: 3px;left: 50%;transform: translateX(-20px); animation: 2s infinite bounce;}
 @keyframes bounce{
@@ -47,14 +57,6 @@ a.btn-primary:hover{background: #5e2d83;border-color: #5e2d83;}
 }
 
 /* 网站介绍 */
-#intro{background: url(../image/bg1.jpg) center top no-repeat;height: 800px;}
-@media all and (max-width:991px){
-	.cover{
-	    background: rgba(86,76,73,.8);
-	    width:100%;
-	    height:800px;
-	}
-}
 #intro article{display: none;text-align: center;}
 #intro .post-header{padding: 180px 0 0;}
 #intro .post-content{color: #fff;font-size: 15px;}
@@ -84,9 +86,16 @@ a.btn-primary:hover{background: #5e2d83;border-color: #5e2d83;}
 .salon{height: 520px;background: url(../image/bg4.jpg) center center;background-attachment: fixed;background-size: cover;}
 .salon .circle{width:450px;height: 450px;border-radius: 250px;margin: 25px 0 0 -225px;background: #fff;color: #241a1f;position: absolute;left: 50%;}
 .salon .circle article{text-align: center;}
-.salon .circle article h1{font-size: 50px;padding: 87px 0 0;margin-bottom: 5px;font-weight: 700;color: #241a1f}
+.salon .circle article h1{font-size: 50px;padding: 75px 0 0;margin-bottom: 5px;font-weight: 700;color: #241a1f}
 .salon .circle .post-content{margin: 0 auto;position: relative;right: 40px;width: 260px;}
 .salon .day,.salon .time{display: inline-block;width: 130px;}
+
+@media all and (max-width:450px){
+	.salon{height: 420px;}
+	.salon .circle{width:350px;height: 350px;border-radius: 175px;margin: 25px 0 0 -175px;}
+	.salon .circle article h1{font-size: 30px;padding: 30px 0 0;}
+	.salon .circle .post-content{font-size: 16px;}
+}
 
 /* price */
 .price {padding: 90px 0;}

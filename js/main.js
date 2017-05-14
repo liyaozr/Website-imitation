@@ -73,8 +73,9 @@ var bg=['url(image/bg1.jpg)','url(image/bg2.jpg)','url(image/bg3.jpg)'];
 $(function () {
 	var num;
 	num  = Math.floor(Math.random()*3);
-	$('#intro').css('background', bg[num]+'no-repeat');
+	$('#header').css('background', bg[num]+'center top no-repeat ');
 });
+
 $(function () {
 	function nextmember() {
 		$(".slide").append($(".slide li:first"));
